@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:single_data_api/api_services.dart';
+import 'package:single_data_api/screen_without_model.dart';
 import 'package:single_data_api/single_post_model.dart';
 
 class ScreenWithModel extends StatefulWidget {
@@ -45,7 +46,7 @@ class _ScreenWithModelState extends State<ScreenWithModel> {
       appBar: AppBar(
         centerTitle: true,
 
-        title: Text('Single Data Api'),
+        title: Text('Single Data Api using Model'),
         backgroundColor: Colors.lightBlueAccent,
       ),
       body:
@@ -64,7 +65,24 @@ class _ScreenWithModelState extends State<ScreenWithModel> {
                   ),
                   Text(
                     singlePostWithModel.body.toString(),
-                    style: TextStyle(fontSize: 20, color: const Color.fromARGB(255, 33, 243, 121)),
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: const Color.fromARGB(255, 33, 243, 121),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ScreenWithoutModel();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text('Move to Screen Without Model'),
                   ),
                 ],
               ),
