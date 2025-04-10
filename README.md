@@ -1,16 +1,9 @@
-# single_data_api
+# Fetching Single Data and Displaying It
 
-A new Flutter project.
+A simple Flutter app that fetches and displays a single user's post from an API. The data is retrieved from: https://jsonplaceholder.typicode.com/posts/1
 
-## Getting Started
+This project includes two implementations:
 
-This project is a starting point for a Flutter application.
+    Using a data model class
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Without using a model class (direct JSON handling)
